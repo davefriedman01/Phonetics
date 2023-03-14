@@ -1,10 +1,6 @@
 # LING 497 Acoustic & Auditory Phonetics
 
----
-
 Visit the LING 497 page [here](https://davefriedman01.github.io/LING497).
-
----
 
 LING 497 Acoustic & Auditory Phonetics
 
