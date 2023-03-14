@@ -1173,6 +1173,298 @@ Too few points to calculate an ellipse
 <img alt="../_images/lab3_70_1.png" src="../_images/lab3_70_1.png" />
 </div>
 </div>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">vowels</span> <span class="o">=</span> <span class="nf">data.frame</span><span class="p">(</span>
+    <span class="n">vowel</span> <span class="o">=</span> <span class="nf">rep</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&#39;a&#39;</span><span class="p">,</span> <span class="s">&#39;e&#39;</span><span class="p">,</span> <span class="s">&#39;i&#39;</span><span class="p">,</span> <span class="s">&#39;o&#39;</span><span class="p">,</span> <span class="s">&#39;u&#39;</span><span class="p">),</span> <span class="n">each</span><span class="o">=</span><span class="m">50</span><span class="p">),</span>
+    <span class="n">F1</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">800</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">100</span><span class="p">),</span>
+           <span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">600</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">100</span><span class="p">),</span>
+           <span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">350</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">100</span><span class="p">),</span>
+           <span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">600</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">100</span><span class="p">),</span>
+           <span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">350</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">100</span><span class="p">)),</span>
+    <span class="n">F2</span> <span class="o">=</span> <span class="nf">c</span><span class="p">(</span><span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">1500</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">150</span><span class="p">),</span>
+           <span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">2000</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">150</span><span class="p">),</span>
+           <span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">2500</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">150</span><span class="p">),</span>
+           <span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">1000</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">150</span><span class="p">),</span>
+           <span class="nf">rnorm</span><span class="p">(</span><span class="m">50</span><span class="p">,</span> <span class="n">mean</span><span class="o">=</span><span class="m">800</span><span class="p">,</span> <span class="n">sd</span><span class="o">=</span><span class="m">150</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="n">vowels</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A data.frame: 250 × 3</caption>
+<thead>
+	<tr><th scope=col>vowel</th><th scope=col>F1</th><th scope=col>F2</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>a</td><td>801.8746</td><td>1661.684</td></tr>
+	<tr><td>a</td><td>781.5747</td><td>1639.767</td></tr>
+	<tr><td>a</td><td>662.8669</td><td>1280.881</td></tr>
+	<tr><td>a</td><td>740.0832</td><td>1364.089</td></tr>
+	<tr><td>a</td><td>829.4545</td><td>1397.948</td></tr>
+	<tr><td>a</td><td>838.9794</td><td>1659.475</td></tr>
+	<tr><td>a</td><td>679.1924</td><td>1396.138</td></tr>
+	<tr><td>a</td><td>763.6324</td><td>1329.956</td></tr>
+	<tr><td>a</td><td>637.3327</td><td>1335.808</td></tr>
+	<tr><td>a</td><td>774.3522</td><td>1348.064</td></tr>
+	<tr><td>a</td><td>910.1780</td><td>1561.542</td></tr>
+	<tr><td>a</td><td>875.5782</td><td>1571.661</td></tr>
+	<tr><td>a</td><td>776.1766</td><td>1150.518</td></tr>
+	<tr><td>a</td><td>898.7445</td><td>1502.438</td></tr>
+	<tr><td>a</td><td>874.1390</td><td>1647.053</td></tr>
+	<tr><td>a</td><td>808.9347</td><td>1620.952</td></tr>
+	<tr><td>a</td><td>704.5056</td><td>1517.940</td></tr>
+	<tr><td>a</td><td>780.4850</td><td>1134.508</td></tr>
+	<tr><td>a</td><td>892.5521</td><td>1504.653</td></tr>
+	<tr><td>a</td><td>848.2979</td><td>1449.638</td></tr>
+	<tr><td>a</td><td>740.3689</td><td>1460.434</td></tr>
+	<tr><td>a</td><td>581.4713</td><td>1446.622</td></tr>
+	<tr><td>a</td><td>732.5134</td><td>1427.827</td></tr>
+	<tr><td>a</td><td>588.0939</td><td>1533.410</td></tr>
+	<tr><td>a</td><td>673.4802</td><td>1864.487</td></tr>
+	<tr><td>a</td><td>762.6338</td><td>1724.445</td></tr>
+	<tr><td>a</td><td>731.2445</td><td>1392.419</td></tr>
+	<tr><td>a</td><td>712.7841</td><td>1429.942</td></tr>
+	<tr><td>a</td><td>789.8239</td><td>1599.439</td></tr>
+	<tr><td>a</td><td>774.6219</td><td>1845.027</td></tr>
+	<tr><td>⋮</td><td>⋮</td><td>⋮</td></tr>
+	<tr><td>u</td><td>317.0775</td><td>719.0060</td></tr>
+	<tr><td>u</td><td>321.7178</td><td>511.1535</td></tr>
+	<tr><td>u</td><td>393.2429</td><td>951.1747</td></tr>
+	<tr><td>u</td><td>319.2393</td><td>758.1148</td></tr>
+	<tr><td>u</td><td>344.3364</td><td>612.5651</td></tr>
+	<tr><td>u</td><td>423.3515</td><td>987.2737</td></tr>
+	<tr><td>u</td><td>359.7312</td><td>771.1680</td></tr>
+	<tr><td>u</td><td>513.0892</td><td>936.7964</td></tr>
+	<tr><td>u</td><td>406.0611</td><td>476.2595</td></tr>
+	<tr><td>u</td><td>482.9565</td><td>993.4416</td></tr>
+	<tr><td>u</td><td>322.1177</td><td>735.7835</td></tr>
+	<tr><td>u</td><td>223.3268</td><td>761.7496</td></tr>
+	<tr><td>u</td><td>325.0852</td><td>999.0737</td></tr>
+	<tr><td>u</td><td>351.7988</td><td>925.8035</td></tr>
+	<tr><td>u</td><td>387.7073</td><td>580.2499</td></tr>
+	<tr><td>u</td><td>429.6009</td><td>707.5621</td></tr>
+	<tr><td>u</td><td>265.9323</td><td>815.9159</td></tr>
+	<tr><td>u</td><td>129.4528</td><td>523.3975</td></tr>
+	<tr><td>u</td><td>237.1944</td><td>557.5366</td></tr>
+	<tr><td>u</td><td>215.8690</td><td>834.1515</td></tr>
+	<tr><td>u</td><td>510.5114</td><td>938.1825</td></tr>
+	<tr><td>u</td><td>424.4424</td><td>750.3195</td></tr>
+	<tr><td>u</td><td>436.2082</td><td>993.0851</td></tr>
+	<tr><td>u</td><td>389.5156</td><td>808.5891</td></tr>
+	<tr><td>u</td><td>400.9119</td><td>469.4100</td></tr>
+	<tr><td>u</td><td>337.7450</td><td>721.5634</td></tr>
+	<tr><td>u</td><td>359.2585</td><td>962.1178</td></tr>
+	<tr><td>u</td><td>314.2120</td><td>763.5288</td></tr>
+	<tr><td>u</td><td>314.0345</td><td>663.5830</td></tr>
+	<tr><td>u</td><td>452.8571</td><td>669.7551</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
+
+<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">F2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">F1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">4</span><span class="p">)</span><span class="o">+</span> <span class="c1"># font size</span>
+<span class="c1">#scale_x_reverse(</span>
+<span class="c1">#    position=&#39;top&#39;,</span>
+<span class="c1">#    labels=unit_format(unit=&#39;Hz&#39;, sep=&#39;&#39;),</span>
+<span class="c1">#    breaks=seq(200, 3000, 500))+</span>
+<span class="c1">#scale_y_reverse(</span>
+<span class="c1">#    position=&#39;right&#39;,</span>
+<span class="c1">#    labels=unit_format(unit=&#39;Hz&#39;, sep=&#39;&#39;),</span>
+<span class="c1">#    breaks=seq(100, 1000, 250))+</span>
+<span class="c1">#labs(</span>
+<span class="c1">#    x=&#39;F2\n&#39;,</span>
+<span class="c1">#    y=&#39;F1\n&#39;,</span>
+<span class="c1">#    title=&#39;Density Plot&#39;)+</span>
+<span class="c1">#geom_density_2d(alpha=0.3)+</span>
+<span class="nf">coord_cartesian</span><span class="p">(</span>
+    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3000</span><span class="p">,</span> <span class="m">200</span><span class="p">),</span>
+    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">theme_classic</span><span class="p">()</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span>
+    <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
+    <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span> <span class="c1"># center plot title</span>
+    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">13</span><span class="p">))</span>         <span class="c1"># plot font size</span>
+
+<span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lab3_74_0.png" src="../_images/lab3_74_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
+
+<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">F2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">F1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">6</span><span class="p">)</span><span class="o">+</span> <span class="c1"># font size</span>
+<span class="nf">scale_x_reverse</span><span class="p">(</span>
+    <span class="n">position</span><span class="o">=</span><span class="s">&#39;top&#39;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">200</span><span class="p">,</span> <span class="m">3000</span><span class="p">,</span> <span class="m">500</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">scale_y_reverse</span><span class="p">(</span>
+    <span class="n">position</span><span class="o">=</span><span class="s">&#39;right&#39;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">1000</span><span class="p">,</span> <span class="m">250</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s">&#39;F2\n&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s">&#39;F1\n&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">&#39;Density Plot&#39;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">geom_density_2d</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">coord_cartesian</span><span class="p">(</span>
+    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3000</span><span class="p">,</span> <span class="m">200</span><span class="p">),</span>
+    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">theme_light</span><span class="p">()</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span>
+    <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
+    <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span> <span class="c1"># center plot title</span>
+    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">13</span><span class="p">))</span>         <span class="c1"># plot font size</span>
+
+<span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lab3_75_0.png" src="../_images/lab3_75_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
+
+<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">F2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">F1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">6</span><span class="p">)</span><span class="o">+</span> <span class="c1"># font size</span>
+<span class="nf">scale_x_reverse</span><span class="p">(</span>
+    <span class="n">position</span><span class="o">=</span><span class="s">&#39;top&#39;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">200</span><span class="p">,</span> <span class="m">3000</span><span class="p">,</span> <span class="m">500</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">scale_y_reverse</span><span class="p">(</span>
+    <span class="n">position</span><span class="o">=</span><span class="s">&#39;right&#39;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">1000</span><span class="p">,</span> <span class="m">250</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s">&#39;F2\n&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s">&#39;F1\n&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">&#39;Density Plot&#39;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">stat_ellipse</span><span class="p">(</span><span class="n">type</span><span class="o">=</span><span class="s">&#39;norm&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">coord_cartesian</span><span class="p">(</span>
+    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3000</span><span class="p">,</span> <span class="m">200</span><span class="p">),</span>
+    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">theme_classic</span><span class="p">()</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span>
+    <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
+    <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span> <span class="c1"># center plot title</span>
+    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">13</span><span class="p">))</span>         <span class="c1"># plot font size</span>
+
+<span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lab3_76_0.png" src="../_images/lab3_76_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">means</span> <span class="o">&lt;-</span> <span class="n">vowels</span> <span class="o">%&gt;%</span> <span class="nf">group_by</span><span class="p">(</span><span class="n">vowel</span><span class="p">)</span> <span class="o">%&gt;%</span> <span class="nf">summarize</span><span class="p">(</span><span class="n">meanF1</span><span class="o">=</span><span class="nf">mean</span><span class="p">(</span><span class="n">F1</span><span class="p">),</span>
+                                                  <span class="n">meanF2</span><span class="o">=</span><span class="nf">mean</span><span class="p">(</span><span class="n">F2</span><span class="p">),</span>
+                                                  <span class="n">seF1</span><span class="o">=</span><span class="nf">sd</span><span class="p">(</span><span class="n">F1</span><span class="p">)</span><span class="o">/</span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">n</span><span class="p">()),</span>
+                                                  <span class="n">seF2</span><span class="o">=</span><span class="nf">sd</span><span class="p">(</span><span class="n">F2</span><span class="p">)</span><span class="o">/</span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">n</span><span class="p">()))</span>
+<span class="n">means</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 5 × 5</caption>
+<thead>
+	<tr><th scope=col>vowel</th><th scope=col>meanF1</th><th scope=col>meanF2</th><th scope=col>seF1</th><th scope=col>seF2</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>a</td><td>765.8705</td><td>1506.9400</td><td>12.25285</td><td>21.84624</td></tr>
+	<tr><td>e</td><td>606.8198</td><td>2042.9371</td><td>13.81097</td><td>20.84642</td></tr>
+	<tr><td>i</td><td>352.4042</td><td>2516.7145</td><td>13.74746</td><td>23.33361</td></tr>
+	<tr><td>o</td><td>578.6033</td><td>1008.8288</td><td>13.60189</td><td>23.78942</td></tr>
+	<tr><td>u</td><td>351.1237</td><td> 776.0376</td><td>13.04699</td><td>24.21912</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
+
+<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">means</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">meanF2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">meanF1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">geom_errorbar</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">ymin</span><span class="o">=</span><span class="n">meanF1</span><span class="o">-</span><span class="n">seF1</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="n">meanF1</span><span class="o">+</span><span class="n">seF1</span><span class="p">),</span> <span class="n">width</span><span class="o">=</span><span class="m">0</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">geom_errorbarh</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">xmin</span><span class="o">=</span><span class="n">meanF2</span><span class="o">-</span><span class="n">seF2</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span><span class="n">meanF2</span><span class="o">+</span><span class="n">seF2</span><span class="p">),</span> <span class="n">height</span><span class="o">=</span><span class="m">0</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">geom_text</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="nf">position_nudge</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="m">50</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="m">50</span><span class="p">),</span> <span class="n">size</span><span class="o">=</span><span class="m">5</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">scale_x_reverse</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s">&#39;top&#39;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">scale_y_reverse</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="s">&#39;right&#39;</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">labs</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&#39;F2\n&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s">&#39;F1\n&#39;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">theme_light</span><span class="p">()</span>
+
+<span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lab3_78_0.png" src="../_images/lab3_78_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
+
+<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">means</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">meanF2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">meanF1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">geom_label</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">6</span><span class="p">)</span><span class="o">+</span> <span class="c1"># font size</span>
+<span class="nf">scale_x_reverse</span><span class="p">(</span>
+    <span class="n">position</span><span class="o">=</span><span class="s">&#39;top&#39;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">200</span><span class="p">,</span> <span class="m">3000</span><span class="p">,</span> <span class="m">500</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">scale_y_reverse</span><span class="p">(</span>
+    <span class="n">position</span><span class="o">=</span><span class="s">&#39;right&#39;</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
+    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">1000</span><span class="p">,</span> <span class="m">250</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s">&#39;F2\n&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s">&#39;F1\n&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">&#39;Density Plot&#39;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">stat_ellipse</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">F2</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">F1</span><span class="p">),</span> <span class="n">type</span><span class="o">=</span><span class="s">&#39;norm&#39;</span><span class="p">)</span><span class="o">+</span>
+<span class="nf">coord_cartesian</span><span class="p">(</span>
+    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3000</span><span class="p">,</span> <span class="m">200</span><span class="p">),</span>
+    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span><span class="o">+</span>
+<span class="nf">theme_classic</span><span class="p">()</span><span class="o">+</span>
+<span class="nf">theme</span><span class="p">(</span>
+    <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
+    <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span> <span class="c1"># center plot title</span>
+    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">13</span><span class="p">))</span>         <span class="c1"># plot font size</span>
+
+<span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/lab3_79_0.png" src="../_images/lab3_79_0.png" />
+</div>
+</div>
 </section>
 <hr class="docutils" />
 <section id="resources">

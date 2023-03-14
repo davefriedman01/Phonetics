@@ -348,13 +348,37 @@ title="Fullscreen mode"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="phonetics">
-<h1>Phonetics<a class="headerlink" href="#phonetics" title="Permalink to this headline">#</a></h1>
-<p>The Pennsylvania State University</p>
-<p>LING 497 Acoustic and Auditory Phonetics</p>
-<p>2023 Spring with <a class="reference external" href="https://deborahcmorton.wordpress.com/">Prof. Deborah Morton</a></p>
+<h1><a class="toc-backref" href="#id1">Phonetics</a><a class="headerlink" href="#phonetics" title="Permalink to this headline">#</a></h1>
+<hr class="docutils" />
+<div class="admonition-revised admonition">
+<p class="admonition-title">Revised</p>
+<p>16 Feb 2023</p>
+</div>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#phonetics" id="id1">Phonetics</a></p>
+<ul>
+<li><p><a class="reference internal" href="#imports-environment" id="id2">Imports &amp; Environment</a></p></li>
+<li><p><a class="reference internal" href="#auxiliary-code" id="id3">Auxiliary Code</a></p></li>
+<li><p><a class="reference internal" href="#speech-sounds" id="id4">Speech Sounds</a></p></li>
+<li><p><a class="reference internal" href="#international-phonetic-alphabet-ipa" id="id5">International Phonetic Alphabet [IPA]</a></p>
+<ul>
+<li><p><a class="reference internal" href="#ipa-extension-unicode-block" id="id6">IPA Extension (Unicode block)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#notes" id="id7">Notes</a></p></li>
+<li><p><a class="reference internal" href="#physics" id="id8">Physics</a></p></li>
+<li><p><a class="reference internal" href="#source-filter-theory-of-speech-production-an-account-of-speech-acoustics" id="id9">Source-Filter Theory of Speech Production: An account of speech acoustics</a></p></li>
+<li><p><a class="reference internal" href="#figures" id="id10">Figures</a></p></li>
+<li><p><a class="reference internal" href="#resources" id="id11">Resources</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
 <hr class="docutils" />
 <section id="imports-environment">
-<h2>Imports &amp; Environment<a class="headerlink" href="#imports-environment" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id2">Imports &amp; Environment</a><a class="headerlink" href="#imports-environment" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>                    <span class="k">as</span> <span class="nn">np</span>
@@ -415,7 +439,7 @@ Pandas              : 1.5.3
 </section>
 <hr class="docutils" />
 <section id="auxiliary-code">
-<h2>Auxiliary Code<a class="headerlink" href="#auxiliary-code" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id3">Auxiliary Code</a><a class="headerlink" href="#auxiliary-code" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dec_to_hex</span> <span class="p">(</span><span class="n">dec</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="o">**</span><span class="mi">16</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
@@ -553,7 +577,7 @@ Pandas              : 1.5.3
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/notebook_10_0.png" src="_images/notebook_10_0.png" />
+<img alt="_images/notebook_11_0.png" src="_images/notebook_11_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -576,7 +600,7 @@ Pandas              : 1.5.3
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/notebook_11_0.png" src="_images/notebook_11_0.png" />
+<img alt="_images/notebook_12_0.png" src="_images/notebook_12_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -614,7 +638,7 @@ Pandas              : 1.5.3
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/notebook_12_0.png" src="_images/notebook_12_0.png" />
+<img alt="_images/notebook_13_0.png" src="_images/notebook_13_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -643,13 +667,13 @@ Pandas              : 1.5.3
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/notebook_13_0.png" src="_images/notebook_13_0.png" />
+<img alt="_images/notebook_14_0.png" src="_images/notebook_14_0.png" />
 </div>
 </div>
 </section>
 <hr class="docutils" />
 <section id="speech-sounds">
-<h2>Speech Sounds<a class="headerlink" href="#speech-sounds" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id4">Speech Sounds</a><a class="headerlink" href="#speech-sounds" title="Permalink to this headline">#</a></h2>
 <p>Consonants</p>
 <ul class="simple">
 <li><p>Where in the vocal tract does the articulation take place? place of articulation</p>
@@ -769,7 +793,7 @@ Pandas              : 1.5.3
 </section>
 <hr class="docutils" />
 <section id="international-phonetic-alphabet-ipa">
-<h2>International Phonetic Alphabet [IPA]<a class="headerlink" href="#international-phonetic-alphabet-ipa" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id5">International Phonetic Alphabet [IPA]</a><a class="headerlink" href="#international-phonetic-alphabet-ipa" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pla</span> <span class="o">=</span> <span class="p">[</span>
@@ -1069,7 +1093,7 @@ Pandas              : 1.5.3
 </div></div>
 </div>
 <section id="ipa-extension-unicode-block">
-<h3>IPA Extension (Unicode block)<a class="headerlink" href="#ipa-extension-unicode-block" title="Permalink to this headline">#</a></h3>
+<h3><a class="toc-backref" href="#id6">IPA Extension (Unicode block)</a><a class="headerlink" href="#ipa-extension-unicode-block" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ipa</span> <span class="o">=</span> <span class="p">[</span>
@@ -1284,7 +1308,7 @@ Pandas              : 1.5.3
 </section>
 <hr class="docutils" />
 <section id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id7">Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">#</a></h2>
 <p>high vowels have low F1
 low vowels have high F1
 front vowels have high F2
@@ -1324,7 +1348,7 @@ the study of speech sound perception<br></p>
 the study of speech sound physics<br></p>
 </section>
 <section id="physics">
-<h2>Physics<a class="headerlink" href="#physics" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id8">Physics</a><a class="headerlink" href="#physics" title="Permalink to this headline">#</a></h2>
 <p><strong>Waveform</strong><br>
 amplitude over time<br></p>
 <p><strong>Power Spectrum</strong><br>
@@ -1369,7 +1393,7 @@ F_n &amp;= \frac{(2n - 1)c}{4(L + 0.4d)}
 Fourier analysis of a waveform produces a power spectrum of the waveform<br></p>
 </section>
 <section id="source-filter-theory-of-speech-production-an-account-of-speech-acoustics">
-<h2>Source-Filter Theory of Speech Production: An account of speech acoustics<a class="headerlink" href="#source-filter-theory-of-speech-production-an-account-of-speech-acoustics" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id9">Source-Filter Theory of Speech Production: An account of speech acoustics</a><a class="headerlink" href="#source-filter-theory-of-speech-production-an-account-of-speech-acoustics" title="Permalink to this headline">#</a></h2>
 <p><strong>Source</strong><br>
 Voicing: the vocal folds produce a complex periodic wave as they are repeatedly opened by subglottal pressure and slap shut by the elastic tension of the vocalis muscle: vocal fold vibration is the usual source of sound in vowels<br></p>
 <p><strong>Filter</strong><br>
@@ -1400,7 +1424,7 @@ the relative amplitudes of the first and second harmonics are related to phonati
 </section>
 <hr class="docutils" />
 <section id="figures">
-<h2>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id10">Figures</a><a class="headerlink" href="#figures" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Nyquist, Harry (1889-1976) <a class="reference external" href="https://en.wikipedia.org/wiki/Harry_Nyquist">Wiki</a></p></li>
 <li><p>Von Helmholtz, Hermann (1821-1894) <a class="reference external" href="https://en.wikipedia.org/wiki/Hermann_von_Helmholtz">Wiki</a></p></li>
@@ -1408,7 +1432,7 @@ the relative amplitudes of the first and second harmonics are related to phonati
 </section>
 <hr class="docutils" />
 <section id="resources">
-<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id11">Resources</a><a class="headerlink" href="#resources" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://alvinntnu.github.io/python-notes/intro.html">Alvin Chen</a></p></li>
 <li><p>Guilherme D. Garcia</p>
