@@ -271,14 +271,31 @@ title="Fullscreen mode"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bark-scale">
-     Bark Scale
+    <a class="reference internal nav-link" href="#f1-f2-data">
+     F1 &amp; F2 data
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vowel-plots-in-r">
-     Vowel Plots in R
+    <a class="reference internal nav-link" href="#bark-values">
+     Bark values
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vowel-plots">
+     Vowel Plots
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#observations">
+       Observations
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#averages">
+       Averages
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#frequency-vs-barks">
@@ -286,8 +303,8 @@ title="Fullscreen mode"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-vowel-plots-in-r">
-     More vowel plots in R
+    <a class="reference internal nav-link" href="#simulating-vowel-plots-in-r">
+     Simulating vowel plots in R
     </a>
    </li>
   </ul>
@@ -379,14 +396,31 @@ title="Fullscreen mode"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#bark-scale">
-     Bark Scale
+    <a class="reference internal nav-link" href="#f1-f2-data">
+     F1 &amp; F2 data
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#vowel-plots-in-r">
-     Vowel Plots in R
+    <a class="reference internal nav-link" href="#bark-values">
+     Bark values
     </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vowel-plots">
+     Vowel Plots
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#observations">
+       Observations
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#averages">
+       Averages
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#frequency-vs-barks">
@@ -394,8 +428,8 @@ title="Fullscreen mode"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#more-vowel-plots-in-r">
-     More vowel plots in R
+    <a class="reference internal nav-link" href="#simulating-vowel-plots-in-r">
+     Simulating vowel plots in R
     </a>
    </li>
   </ul>
@@ -447,14 +481,20 @@ title="Fullscreen mode"
 </li>
 <li><p><a class="reference internal" href="#plots" id="id18">Plots</a></p>
 <ul>
-<li><p><a class="reference internal" href="#bark-scale" id="id19">Bark Scale</a></p></li>
-<li><p><a class="reference internal" href="#vowel-plots-in-r" id="id20">Vowel Plots in R</a></p></li>
-<li><p><a class="reference internal" href="#frequency-vs-barks" id="id21">Frequency vs Barks</a></p></li>
-<li><p><a class="reference internal" href="#more-vowel-plots-in-r" id="id22">More vowel plots in R</a></p></li>
+<li><p><a class="reference internal" href="#f1-f2-data" id="id19">F1 &amp; F2 data</a></p></li>
+<li><p><a class="reference internal" href="#bark-values" id="id20">Bark values</a></p></li>
+<li><p><a class="reference internal" href="#vowel-plots" id="id21">Vowel Plots</a></p>
+<ul>
+<li><p><a class="reference internal" href="#observations" id="id22">Observations</a></p></li>
+<li><p><a class="reference internal" href="#averages" id="id23">Averages</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#resources" id="id23">Resources</a></p></li>
-<li><p><a class="reference internal" href="#terms" id="id24">Terms</a></p></li>
+<li><p><a class="reference internal" href="#frequency-vs-barks" id="id24">Frequency vs Barks</a></p></li>
+<li><p><a class="reference internal" href="#simulating-vowel-plots-in-r" id="id25">Simulating vowel plots in R</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#resources" id="id26">Resources</a></p></li>
+<li><p><a class="reference internal" href="#terms" id="id27">Terms</a></p></li>
 </ul>
 </li>
 </ul>
@@ -465,141 +505,133 @@ title="Fullscreen mode"
 <section id="ae">
 <h3><a class="toc-backref" href="#id9">æ</a><a class="headerlink" href="#ae" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="37e64db7-c56c-44e7-893f-9d63a75e1de3" name="f8311668-4312-4707-b1bf-1f5858b05e0e" type="radio">
-</input><label class="sd-tab-label" for="37e64db7-c56c-44e7-893f-9d63a75e1de3">
+<input checked="checked" id="b90f475b-c227-4ca7-a179-557f681eaf2c" name="bc3d64f1-cde7-45e5-b159-28df1ad83e5b" type="radio">
+</input><label class="sd-tab-label" for="b90f475b-c227-4ca7-a179-557f681eaf2c">
 hæd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/00.png" /></p>
 </div>
-<input id="67d90d5d-7f13-4dd3-a316-bd9fe875059f" name="f8311668-4312-4707-b1bf-1f5858b05e0e" type="radio">
-</input><label class="sd-tab-label" for="67d90d5d-7f13-4dd3-a316-bd9fe875059f">
+<input id="2550aa11-9862-42bf-a85c-7015e544fd33" name="bc3d64f1-cde7-45e5-b159-28df1ad83e5b" type="radio">
+</input><label class="sd-tab-label" for="2550aa11-9862-42bf-a85c-7015e544fd33">
 bæt</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/09.png" /></p>
 </div>
 </div>
 </section>
-<hr class="docutils" />
 <section id="id1">
 <h3><a class="toc-backref" href="#id10">ɛ</a><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="844d1b1d-b40e-4232-9e9e-2665c7e6d7d0" name="805afcaf-8946-4b6f-a22d-3c379999f5d0" type="radio">
-</input><label class="sd-tab-label" for="844d1b1d-b40e-4232-9e9e-2665c7e6d7d0">
+<input checked="checked" id="3898b9a2-eff7-4307-80b4-2d3c65c983b3" name="27859440-0435-40cb-a339-9f17e007d54d" type="radio">
+</input><label class="sd-tab-label" for="3898b9a2-eff7-4307-80b4-2d3c65c983b3">
 hɛd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/01.png" /></p>
 </div>
-<input id="0d359c08-ae9c-4086-8b12-55851aa55fa8" name="805afcaf-8946-4b6f-a22d-3c379999f5d0" type="radio">
-</input><label class="sd-tab-label" for="0d359c08-ae9c-4086-8b12-55851aa55fa8">
+<input id="30427472-263d-41cf-bac2-41baee08da1f" name="27859440-0435-40cb-a339-9f17e007d54d" type="radio">
+</input><label class="sd-tab-label" for="30427472-263d-41cf-bac2-41baee08da1f">
 bɛd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/10.png" /></p>
 </div>
 </div>
 </section>
-<hr class="docutils" />
 <section id="i">
 <h3><a class="toc-backref" href="#id11">i</a><a class="headerlink" href="#i" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="24cd0291-47c5-432d-8ab5-c97d88e40962" name="3c12a6e6-f048-4d7e-9baa-e04a6d6691a8" type="radio">
-</input><label class="sd-tab-label" for="24cd0291-47c5-432d-8ab5-c97d88e40962">
+<input checked="checked" id="14cf06ec-302e-436e-b1a9-d8e500655a06" name="222d36fb-0291-41b3-a5c9-38693ac08792" type="radio">
+</input><label class="sd-tab-label" for="14cf06ec-302e-436e-b1a9-d8e500655a06">
 hid</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/02.png" /></p>
 </div>
-<input id="97e2b7e0-5b4d-45ff-89da-dc11febf0617" name="3c12a6e6-f048-4d7e-9baa-e04a6d6691a8" type="radio">
-</input><label class="sd-tab-label" for="97e2b7e0-5b4d-45ff-89da-dc11febf0617">
+<input id="094bad0a-d577-43eb-89ad-cfeaa92dc98e" name="222d36fb-0291-41b3-a5c9-38693ac08792" type="radio">
+</input><label class="sd-tab-label" for="094bad0a-d577-43eb-89ad-cfeaa92dc98e">
 bid</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/11.png" /></p>
 </div>
 </div>
 </section>
-<hr class="docutils" />
 <section id="id2">
 <h3><a class="toc-backref" href="#id12">ɪ</a><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="36331382-0a66-4854-9153-a10107807b51" name="b176c414-d07c-44ca-a128-5ab65e59302c" type="radio">
-</input><label class="sd-tab-label" for="36331382-0a66-4854-9153-a10107807b51">
+<input checked="checked" id="4bfc19ac-e36e-4a30-899d-568a056f9288" name="386a86a6-bd83-467e-9cb5-841dde7a3149" type="radio">
+</input><label class="sd-tab-label" for="4bfc19ac-e36e-4a30-899d-568a056f9288">
 hɪd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/03.png" /></p>
 </div>
-<input id="64bf3011-7603-4b8e-b640-cc8048632239" name="b176c414-d07c-44ca-a128-5ab65e59302c" type="radio">
-</input><label class="sd-tab-label" for="64bf3011-7603-4b8e-b640-cc8048632239">
+<input id="cdf249d1-66b8-4d38-87d6-a2b0f7378284" name="386a86a6-bd83-467e-9cb5-841dde7a3149" type="radio">
+</input><label class="sd-tab-label" for="cdf249d1-66b8-4d38-87d6-a2b0f7378284">
 bɪd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/12.png" /></p>
 </div>
 </div>
 </section>
-<hr class="docutils" />
 <section id="id3">
 <h3><a class="toc-backref" href="#id13">ɑ</a><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="a4214566-611a-446f-91d8-3cc49b6f1072" name="01c1fa49-32e4-47b1-b17d-0dfba6d5ab75" type="radio">
-</input><label class="sd-tab-label" for="a4214566-611a-446f-91d8-3cc49b6f1072">
+<input checked="checked" id="da9102c9-7412-48ce-a099-5e8246ed6412" name="68861c16-686f-4a40-9326-b36b6b712546" type="radio">
+</input><label class="sd-tab-label" for="da9102c9-7412-48ce-a099-5e8246ed6412">
 hɑd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/04.png" /></p>
 </div>
-<input id="8fc36597-67ce-4f21-978e-42a36fa652c4" name="01c1fa49-32e4-47b1-b17d-0dfba6d5ab75" type="radio">
-</input><label class="sd-tab-label" for="8fc36597-67ce-4f21-978e-42a36fa652c4">
+<input id="28e57349-117a-4f39-abd6-4c209656d1ca" name="68861c16-686f-4a40-9326-b36b6b712546" type="radio">
+</input><label class="sd-tab-label" for="28e57349-117a-4f39-abd6-4c209656d1ca">
 bɑd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/13.png" /></p>
 </div>
 </div>
 </section>
-<hr class="docutils" />
 <section id="id4">
 <h3><a class="toc-backref" href="#id14">ʊ</a><a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="9a1f4e61-50d9-4d1f-8911-919586e924db" name="a4e7618f-d516-4556-aa8b-f1998773a7a6" type="radio">
-</input><label class="sd-tab-label" for="9a1f4e61-50d9-4d1f-8911-919586e924db">
+<input checked="checked" id="d5ab4ffc-6516-42fc-bdf3-777234d83f5a" name="5a91622b-910e-4d17-a9db-25c75b739578" type="radio">
+</input><label class="sd-tab-label" for="d5ab4ffc-6516-42fc-bdf3-777234d83f5a">
 hʊd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/05.png" /></p>
 </div>
-<input id="43b9e9af-5f43-4f8c-898f-ea6f0e792de3" name="a4e7618f-d516-4556-aa8b-f1998773a7a6" type="radio">
-</input><label class="sd-tab-label" for="43b9e9af-5f43-4f8c-898f-ea6f0e792de3">
+<input id="44924062-d44e-4593-9959-119be4300cbb" name="5a91622b-910e-4d17-a9db-25c75b739578" type="radio">
+</input><label class="sd-tab-label" for="44924062-d44e-4593-9959-119be4300cbb">
 bʊk</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/14.png" /></p>
 </div>
 </div>
 </section>
-<hr class="docutils" />
 <section id="id5">
 <h3><a class="toc-backref" href="#id15">ʌ</a><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="c6e9e1b1-e2d3-4d87-bb7f-d283b58671f7" name="b28f568b-6afb-415f-983d-f6fb764bdd43" type="radio">
-</input><label class="sd-tab-label" for="c6e9e1b1-e2d3-4d87-bb7f-d283b58671f7">
+<input checked="checked" id="d7f61246-18c7-4c2d-9001-65cc803dfe6a" name="3ea442e2-15f8-42eb-a46e-4593db1c7e7f" type="radio">
+</input><label class="sd-tab-label" for="d7f61246-18c7-4c2d-9001-65cc803dfe6a">
 hʌd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/06.png" /></p>
 </div>
-<input id="b0dfdb36-74a0-4a47-ad95-15276ce5ce39" name="b28f568b-6afb-415f-983d-f6fb764bdd43" type="radio">
-</input><label class="sd-tab-label" for="b0dfdb36-74a0-4a47-ad95-15276ce5ce39">
+<input id="74b3f5d5-dbb1-48e2-af00-f0c6807df892" name="3ea442e2-15f8-42eb-a46e-4593db1c7e7f" type="radio">
+</input><label class="sd-tab-label" for="74b3f5d5-dbb1-48e2-af00-f0c6807df892">
 bʌd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/15.png" /></p>
 </div>
 </div>
 </section>
-<hr class="docutils" />
 <section id="u">
 <h3><a class="toc-backref" href="#id16">u</a><a class="headerlink" href="#u" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="0672e9d3-ffe1-443d-8a4b-b9dce239446f" name="12be19dc-699d-48ed-80d8-b4d1fc1f36d3" type="radio">
-</input><label class="sd-tab-label" for="0672e9d3-ffe1-443d-8a4b-b9dce239446f">
+<input checked="checked" id="85b32efb-984f-4bed-a110-4a5d7a93f482" name="02c75d0a-f60f-48dc-a7b6-0aa01b5186ba" type="radio">
+</input><label class="sd-tab-label" for="85b32efb-984f-4bed-a110-4a5d7a93f482">
 hud</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/07.png" /></p>
 </div>
-<input id="21d4cb3a-376b-4d4b-8054-ae09b6582596" name="12be19dc-699d-48ed-80d8-b4d1fc1f36d3" type="radio">
-</input><label class="sd-tab-label" for="21d4cb3a-376b-4d4b-8054-ae09b6582596">
+<input id="a27d841c-e6f5-4825-902e-22de9449606a" name="02c75d0a-f60f-48dc-a7b6-0aa01b5186ba" type="radio">
+</input><label class="sd-tab-label" for="a27d841c-e6f5-4825-902e-22de9449606a">
 bud</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/16.png" /></p>
 </div>
 </div>
 </section>
-<hr class="docutils" />
 <section id="id6">
 <h3><a class="toc-backref" href="#id17">ɔ</a><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h3>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="f13fc5f2-e0c1-4c2f-92cd-6580659b6866" name="3d55654e-538b-44e1-8307-b984f7a81fcc" type="radio">
-</input><label class="sd-tab-label" for="f13fc5f2-e0c1-4c2f-92cd-6580659b6866">
+<input checked="checked" id="ddea207f-725c-4865-a7a0-507dbd3004c3" name="93ddf3f6-dc2c-458d-b533-085b362e7dac" type="radio">
+</input><label class="sd-tab-label" for="ddea207f-725c-4865-a7a0-507dbd3004c3">
 hɔd</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/08.png" /></p>
 </div>
-<input id="53523bd9-ab11-48cb-8187-dc9713ec3c6f" name="3d55654e-538b-44e1-8307-b984f7a81fcc" type="radio">
-</input><label class="sd-tab-label" for="53523bd9-ab11-48cb-8187-dc9713ec3c6f">
+<input id="83d61f84-93be-49da-b443-cc27ed620453" name="93ddf3f6-dc2c-458d-b533-085b362e7dac" type="radio">
+</input><label class="sd-tab-label" for="83d61f84-93be-49da-b443-cc27ed620453">
 bɔt</label><div class="sd-tab-content docutils">
 <p><img alt="" src="../_images/17.png" /></p>
 </div>
@@ -609,42 +641,45 @@ bɔt</label><div class="sd-tab-content docutils">
 <hr class="docutils" />
 <section id="plots">
 <h2><a class="toc-backref" href="#id18">Plots</a><a class="headerlink" href="#plots" title="Permalink to this headline">#</a></h2>
+<section id="f1-f2-data">
+<h3><a class="toc-backref" href="#id19">F1 &amp; F2 data</a><a class="headerlink" href="#f1-f2-data" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">import</span> <span class="n">pandas</span> <span class="n">as</span> <span class="n">pd</span>
-
-<span class="n">cols</span><span class="o">=</span><span class="p">[</span>
-  <span class="s">&#39;vowel&#39;</span><span class="p">,</span>
-  <span class="s">&#39;word&#39;</span><span class="p">,</span>
-  <span class="s">&#39;avg_F1_Hz&#39;</span><span class="p">,</span>
-  <span class="s">&#39;avg_F2_Hz&#39;</span><span class="p">,</span>
-<span class="p">]</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">import</span> <span class="n">numpy</span>  <span class="n">as</span> <span class="n">np</span>
+<span class="n">import</span> <span class="n">pandas</span> <span class="n">as</span> <span class="n">pd</span>
 
 <span class="n">obs</span> <span class="o">=</span> <span class="nf">pd.DataFrame</span><span class="p">(</span>
   <span class="n">data</span><span class="o">=</span><span class="p">[</span>
-    <span class="p">[</span><span class="s">&#39;æ&#39;</span><span class="p">,</span><span class="s">&#39;hæd&#39;</span><span class="p">,</span><span class="m">772.2623598361888</span><span class="p">,</span><span class="m">1731.6866205977226</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ɛ&#39;</span><span class="p">,</span><span class="s">&#39;hɛd&#39;</span><span class="p">,</span><span class="m">574.208631287283</span><span class="p">,</span><span class="m">1918.637682685363</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="s">&#39;hid&#39;</span><span class="p">,</span><span class="m">305.92339403193955</span><span class="p">,</span><span class="m">2458.4996663060283</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ɪ&#39;</span><span class="p">,</span><span class="s">&#39;hɪd&#39;</span><span class="p">,</span><span class="m">453.5730951234637</span><span class="p">,</span><span class="m">2072.92348845572</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ɑ&#39;</span><span class="p">,</span><span class="s">&#39;hɑd&#39;</span><span class="p">,</span><span class="m">714.6610521359538</span><span class="p">,</span><span class="m">1214.4713341175295</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ʊ&#39;</span><span class="p">,</span><span class="s">&#39;hʊd&#39;</span><span class="p">,</span><span class="m">476.80292121316353</span><span class="p">,</span><span class="m">1338.2178121189354</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ʌ&#39;</span><span class="p">,</span><span class="s">&#39;hʌd&#39;</span><span class="p">,</span><span class="m">618.9116494455797</span><span class="p">,</span><span class="m">1425.8562296798175</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;u&#39;</span><span class="p">,</span><span class="s">&#39;hud&#39;</span><span class="p">,</span><span class="m">318.0286268276335</span><span class="p">,</span><span class="m">1095.993125792178</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ɔ&#39;</span><span class="p">,</span><span class="s">&#39;hɔd&#39;</span><span class="p">,</span><span class="m">610.8859754665131</span><span class="p">,</span><span class="m">935.5714048615686</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;æ&#39;</span><span class="p">,</span><span class="s">&#39;bæt&#39;</span><span class="p">,</span><span class="m">812.4152837356295</span><span class="p">,</span><span class="m">1702.1079409783133</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ɛ&#39;</span><span class="p">,</span><span class="s">&#39;bɛd&#39;</span><span class="p">,</span><span class="m">534.3448157343192</span><span class="p">,</span><span class="m">1891.7585442888867</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="s">&#39;bid&#39;</span><span class="p">,</span><span class="m">289.82041231188634</span><span class="p">,</span><span class="m">2429.2999144902774</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ɪ&#39;</span><span class="p">,</span><span class="s">&#39;bɪd&#39;</span><span class="p">,</span><span class="m">450.1635653561586</span><span class="p">,</span><span class="m">2009.4880143110365</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ɑ&#39;</span><span class="p">,</span><span class="s">&#39;bɑd&#39;</span><span class="p">,</span><span class="m">708.1091727260111</span><span class="p">,</span><span class="m">1189.9926250011079</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ʊ&#39;</span><span class="p">,</span><span class="s">&#39;bʊk&#39;</span><span class="p">,</span><span class="m">497.65304819673605</span><span class="p">,</span><span class="m">1020.9113547201716</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ʌ&#39;</span><span class="p">,</span><span class="s">&#39;bʌd&#39;</span><span class="p">,</span><span class="m">606.6914116015801</span><span class="p">,</span><span class="m">1372.059084614637</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;u&#39;</span><span class="p">,</span><span class="s">&#39;bud&#39;</span><span class="p">,</span><span class="m">323.43445114657317</span><span class="p">,</span><span class="m">1264.2416721859588</span><span class="p">],</span>
-    <span class="p">[</span><span class="s">&#39;ɔ&#39;</span><span class="p">,</span><span class="s">&#39;bɔt&#39;</span><span class="p">,</span><span class="m">636.7402932330717</span><span class="p">,</span><span class="m">994.824262278683</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;hæd&#39;</span><span class="p">,</span><span class="s">&#39;æ&#39;</span><span class="p">,</span><span class="m">772.2623598361888</span> <span class="p">,</span><span class="m">1731.6866205977226</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;hɛd&#39;</span><span class="p">,</span><span class="s">&#39;ɛ&#39;</span><span class="p">,</span><span class="m">574.208631287283</span>  <span class="p">,</span><span class="m">1918.637682685363</span> <span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;hid&#39;</span><span class="p">,</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="m">305.92339403193955</span><span class="p">,</span><span class="m">2458.4996663060283</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;hɪd&#39;</span><span class="p">,</span><span class="s">&#39;ɪ&#39;</span><span class="p">,</span><span class="m">453.5730951234637</span> <span class="p">,</span><span class="m">2072.92348845572</span>  <span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;hɑd&#39;</span><span class="p">,</span><span class="s">&#39;ɑ&#39;</span><span class="p">,</span><span class="m">714.6610521359538</span> <span class="p">,</span><span class="m">1214.4713341175295</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;hʊd&#39;</span><span class="p">,</span><span class="s">&#39;ʊ&#39;</span><span class="p">,</span><span class="m">476.80292121316353</span><span class="p">,</span><span class="m">1338.2178121189354</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;hʌd&#39;</span><span class="p">,</span><span class="s">&#39;ʌ&#39;</span><span class="p">,</span><span class="m">618.9116494455797</span> <span class="p">,</span><span class="m">1425.8562296798175</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;hud&#39;</span><span class="p">,</span><span class="s">&#39;u&#39;</span><span class="p">,</span><span class="m">318.0286268276335</span> <span class="p">,</span><span class="m">1095.993125792178</span> <span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;hɔd&#39;</span><span class="p">,</span><span class="s">&#39;ɔ&#39;</span><span class="p">,</span><span class="m">610.8859754665131</span> <span class="p">,</span><span class="m">935.5714048615686</span> <span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;bæt&#39;</span><span class="p">,</span><span class="s">&#39;æ&#39;</span><span class="p">,</span><span class="m">812.4152837356295</span> <span class="p">,</span><span class="m">1702.1079409783133</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;bɛd&#39;</span><span class="p">,</span><span class="s">&#39;ɛ&#39;</span><span class="p">,</span><span class="m">534.3448157343192</span> <span class="p">,</span><span class="m">1891.7585442888867</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;bid&#39;</span><span class="p">,</span><span class="s">&#39;i&#39;</span><span class="p">,</span><span class="m">289.82041231188634</span><span class="p">,</span><span class="m">2429.2999144902774</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;bɪd&#39;</span><span class="p">,</span><span class="s">&#39;ɪ&#39;</span><span class="p">,</span><span class="m">450.1635653561586</span> <span class="p">,</span><span class="m">2009.4880143110365</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;bɑd&#39;</span><span class="p">,</span><span class="s">&#39;ɑ&#39;</span><span class="p">,</span><span class="m">708.1091727260111</span> <span class="p">,</span><span class="m">1189.9926250011079</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;bʊk&#39;</span><span class="p">,</span><span class="s">&#39;ʊ&#39;</span><span class="p">,</span><span class="m">497.65304819673605</span><span class="p">,</span><span class="m">1020.9113547201716</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;bʌd&#39;</span><span class="p">,</span><span class="s">&#39;ʌ&#39;</span><span class="p">,</span><span class="m">606.6914116015801</span> <span class="p">,</span><span class="m">1372.059084614637</span> <span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;bud&#39;</span><span class="p">,</span><span class="s">&#39;u&#39;</span><span class="p">,</span><span class="m">323.43445114657317</span><span class="p">,</span><span class="m">1264.2416721859588</span><span class="p">],</span>
+    <span class="p">[</span><span class="s">&#39;bɔt&#39;</span><span class="p">,</span><span class="s">&#39;ɔ&#39;</span><span class="p">,</span><span class="m">636.7402932330717</span> <span class="p">,</span><span class="m">994.824262278683</span>  <span class="p">],</span>
   <span class="p">],</span>
-  <span class="n">columns</span><span class="o">=</span><span class="n">cols</span>
+  <span class="n">columns</span><span class="o">=</span><span class="p">[</span>
+  <span class="s">&#39;word&#39;</span><span class="p">,</span>
+  <span class="s">&#39;vowel&#39;</span><span class="p">,</span>
+  <span class="s">&#39;F1_Hz&#39;</span><span class="p">,</span>
+  <span class="s">&#39;F2_Hz&#39;</span><span class="p">,</span>
+  <span class="p">],</span>
 <span class="p">)</span>
-<span class="nf">obs.drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;word&#39;</span><span class="p">])</span><span class="nf">.set_index</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;vowel&#39;</span><span class="p">])</span><span class="nf">.to_csv</span><span class="p">(</span><span class="s">&#39;lab3_obs.csv&#39;</span><span class="p">)</span>
-<span class="n">obs</span>
+<span class="nf">obs.drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;word&#39;</span><span class="p">])</span>   \
+  <span class="nf">.set_index</span><span class="p">(</span><span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;vowel&#39;</span><span class="p">])</span> \
+  <span class="nf">.to_csv</span><span class="p">(</span><span class="s">&#39;lab3_obs.csv&#39;</span><span class="p">)</span>
+<span class="nf">obs.round</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -667,138 +702,138 @@ bɔt</label><div class="sd-tab-content docutils">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>vowel</th>
       <th>word</th>
-      <th>avg_F1_Hz</th>
-      <th>avg_F2_Hz</th>
+      <th>vowel</th>
+      <th>F1_Hz</th>
+      <th>F2_Hz</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>æ</td>
       <td>hæd</td>
-      <td>772.262360</td>
-      <td>1731.686621</td>
+      <td>æ</td>
+      <td>772.26</td>
+      <td>1731.69</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>ɛ</td>
       <td>hɛd</td>
-      <td>574.208631</td>
-      <td>1918.637683</td>
+      <td>ɛ</td>
+      <td>574.21</td>
+      <td>1918.64</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>i</td>
       <td>hid</td>
-      <td>305.923394</td>
-      <td>2458.499666</td>
+      <td>i</td>
+      <td>305.92</td>
+      <td>2458.50</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>ɪ</td>
       <td>hɪd</td>
-      <td>453.573095</td>
-      <td>2072.923488</td>
+      <td>ɪ</td>
+      <td>453.57</td>
+      <td>2072.92</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>ɑ</td>
       <td>hɑd</td>
-      <td>714.661052</td>
-      <td>1214.471334</td>
+      <td>ɑ</td>
+      <td>714.66</td>
+      <td>1214.47</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>ʊ</td>
       <td>hʊd</td>
-      <td>476.802921</td>
-      <td>1338.217812</td>
+      <td>ʊ</td>
+      <td>476.80</td>
+      <td>1338.22</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>ʌ</td>
       <td>hʌd</td>
-      <td>618.911649</td>
-      <td>1425.856230</td>
+      <td>ʌ</td>
+      <td>618.91</td>
+      <td>1425.86</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>u</td>
       <td>hud</td>
-      <td>318.028627</td>
-      <td>1095.993126</td>
+      <td>u</td>
+      <td>318.03</td>
+      <td>1095.99</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>ɔ</td>
       <td>hɔd</td>
-      <td>610.885975</td>
-      <td>935.571405</td>
+      <td>ɔ</td>
+      <td>610.89</td>
+      <td>935.57</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>æ</td>
       <td>bæt</td>
-      <td>812.415284</td>
-      <td>1702.107941</td>
+      <td>æ</td>
+      <td>812.42</td>
+      <td>1702.11</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>ɛ</td>
       <td>bɛd</td>
-      <td>534.344816</td>
-      <td>1891.758544</td>
+      <td>ɛ</td>
+      <td>534.34</td>
+      <td>1891.76</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>i</td>
       <td>bid</td>
-      <td>289.820412</td>
-      <td>2429.299914</td>
+      <td>i</td>
+      <td>289.82</td>
+      <td>2429.30</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>ɪ</td>
       <td>bɪd</td>
-      <td>450.163565</td>
-      <td>2009.488014</td>
+      <td>ɪ</td>
+      <td>450.16</td>
+      <td>2009.49</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>ɑ</td>
       <td>bɑd</td>
-      <td>708.109173</td>
-      <td>1189.992625</td>
+      <td>ɑ</td>
+      <td>708.11</td>
+      <td>1189.99</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>ʊ</td>
       <td>bʊk</td>
-      <td>497.653048</td>
-      <td>1020.911355</td>
+      <td>ʊ</td>
+      <td>497.65</td>
+      <td>1020.91</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>ʌ</td>
       <td>bʌd</td>
-      <td>606.691412</td>
-      <td>1372.059085</td>
+      <td>ʌ</td>
+      <td>606.69</td>
+      <td>1372.06</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>u</td>
       <td>bud</td>
-      <td>323.434451</td>
-      <td>1264.241672</td>
+      <td>u</td>
+      <td>323.43</td>
+      <td>1264.24</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>ɔ</td>
       <td>bɔt</td>
-      <td>636.740293</td>
-      <td>994.824262</td>
+      <td>ɔ</td>
+      <td>636.74</td>
+      <td>994.82</td>
     </tr>
   </tbody>
 </table>
@@ -806,7 +841,10 @@ bɔt</label><div class="sd-tab-content docutils">
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">avg</span> <span class="o">=</span> <span class="nf">obs.drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;word&#39;</span><span class="p">])</span><span class="nf">.groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;vowel&#39;</span><span class="p">])</span><span class="nf">.mean</span><span class="p">()</span><span class="nf">.round</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">avg</span> <span class="o">=</span> <span class="nf">obs.drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;word&#39;</span><span class="p">])</span> \
+  <span class="nf">.groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;vowel&#39;</span><span class="p">])</span>         \
+  <span class="nf">.mean</span><span class="p">()</span>                        \
+  <span class="nf">.round</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
 <span class="nf">avg.to_csv</span><span class="p">(</span><span class="s">&#39;lab3_avg.csv&#39;</span><span class="p">)</span>
 <span class="n">avg</span>
 </pre></div>
@@ -831,8 +869,8 @@ bɔt</label><div class="sd-tab-content docutils">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>avg_F1_Hz</th>
-      <th>avg_F2_Hz</th>
+      <th>F1_Hz</th>
+      <th>F2_Hz</th>
     </tr>
     <tr>
       <th>vowel</th>
@@ -890,24 +928,24 @@ bɔt</label><div class="sd-tab-content docutils">
 </table>
 </div></div></div>
 </div>
+</section>
 <hr class="docutils" />
-<section id="bark-scale">
-<h3><a class="toc-backref" href="#id19">Bark Scale</a><a class="headerlink" href="#bark-scale" title="Permalink to this headline">#</a></h3>
+<section id="bark-values">
+<h3><a class="toc-backref" href="#id20">Bark values</a><a class="headerlink" href="#bark-values" title="Permalink to this headline">#</a></h3>
+<p>Frequency to bark conversion</p>
 <p><span class="math notranslate nohighlight">\(
 \text{bark}=6\sinh^{-1}\left(\frac{f}{600}\right)
 \)</span></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">import</span> <span class="n">numpy</span> <span class="n">as</span> <span class="n">np</span>
-
-<span class="n">def</span> <span class="nf">freq_to_bark </span><span class="p">(</span><span class="n">freq</span> <span class="o">:</span> <span class="n">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">float</span><span class="o">:</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">def</span> <span class="nf">freq_to_bark </span><span class="p">(</span><span class="n">freq</span> <span class="o">:</span> <span class="n">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">float</span><span class="o">:</span>
   <span class="n">bark</span> <span class="o">=</span> <span class="m">6</span><span class="o">*</span><span class="nf">np.arcsinh</span><span class="p">(</span><span class="n">freq</span><span class="o">/</span><span class="m">600</span><span class="p">)</span>
   <span class="n">return</span> <span class="n">bark</span>
 
-<span class="n">avg</span><span class="p">[</span><span class="s">&#39;F1_bark&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg</span><span class="p">[</span><span class="s">&#39;avg_F1_Hz&#39;</span><span class="p">]</span><span class="nf">.apply</span><span class="p">(</span><span class="n">freq_to_bark</span><span class="p">)</span>
-<span class="n">avg</span><span class="p">[</span><span class="s">&#39;F2_bark&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg</span><span class="p">[</span><span class="s">&#39;avg_F2_Hz&#39;</span><span class="p">]</span><span class="nf">.apply</span><span class="p">(</span><span class="n">freq_to_bark</span><span class="p">)</span>
-<span class="nf">avg.drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;avg_F1_Hz&#39;</span><span class="p">,</span><span class="s">&#39;avg_F2_Hz&#39;</span><span class="p">])</span><span class="nf">.to_csv</span><span class="p">(</span><span class="s">&#39;lab3_bark.csv&#39;</span><span class="p">)</span>
-<span class="n">avg</span>
+<span class="n">avg</span><span class="p">[</span><span class="s">&#39;F1_bark&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg</span><span class="p">[</span><span class="s">&#39;F1_Hz&#39;</span><span class="p">]</span><span class="nf">.apply</span><span class="p">(</span><span class="n">freq_to_bark</span><span class="p">)</span>
+<span class="n">avg</span><span class="p">[</span><span class="s">&#39;F2_bark&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">avg</span><span class="p">[</span><span class="s">&#39;F2_Hz&#39;</span><span class="p">]</span><span class="nf">.apply</span><span class="p">(</span><span class="n">freq_to_bark</span><span class="p">)</span>
+<span class="nf">avg.drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;F1_Hz&#39;</span><span class="p">,</span><span class="s">&#39;F2_Hz&#39;</span><span class="p">])</span><span class="nf">.to_csv</span><span class="p">(</span><span class="s">&#39;lab3_bark.csv&#39;</span><span class="p">)</span>
+<span class="nf">avg.drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;F1_Hz&#39;</span><span class="p">,</span><span class="s">&#39;F2_Hz&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -930,8 +968,6 @@ bɔt</label><div class="sd-tab-content docutils">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>avg_F1_Hz</th>
-      <th>avg_F2_Hz</th>
       <th>F1_bark</th>
       <th>F2_bark</th>
     </tr>
@@ -939,71 +975,51 @@ bɔt</label><div class="sd-tab-content docutils">
       <th>vowel</th>
       <th></th>
       <th></th>
-      <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>i</th>
-      <td>297.87</td>
-      <td>2443.90</td>
       <td>2.868206</td>
       <td>12.673842</td>
     </tr>
     <tr>
       <th>u</th>
-      <td>320.73</td>
-      <td>1180.12</td>
       <td>3.071393</td>
       <td>8.572313</td>
     </tr>
     <tr>
       <th>æ</th>
-      <td>792.34</td>
-      <td>1716.90</td>
       <td>6.545572</td>
       <td>10.642287</td>
     </tr>
     <tr>
       <th>ɑ</th>
-      <td>711.39</td>
-      <td>1202.23</td>
       <td>6.040524</td>
       <td>8.671778</td>
     </tr>
     <tr>
       <th>ɔ</th>
-      <td>623.81</td>
-      <td>965.20</td>
       <td>5.454945</td>
       <td>7.521406</td>
     </tr>
     <tr>
       <th>ɛ</th>
-      <td>554.28</td>
-      <td>1905.20</td>
       <td>4.958718</td>
       <td>11.234881</td>
     </tr>
     <tr>
       <th>ɪ</th>
-      <td>451.87</td>
-      <td>2041.21</td>
       <td>4.173832</td>
       <td>11.630689</td>
     </tr>
     <tr>
       <th>ʊ</th>
-      <td>487.23</td>
-      <td>1179.56</td>
       <td>4.452301</td>
       <td>8.569775</td>
     </tr>
     <tr>
       <th>ʌ</th>
-      <td>612.80</td>
-      <td>1398.96</td>
       <td>5.378270</td>
       <td>9.496836</td>
     </tr>
@@ -1013,8 +1029,8 @@ bɔt</label><div class="sd-tab-content docutils">
 </div>
 </section>
 <hr class="docutils" />
-<section id="vowel-plots-in-r">
-<h3><a class="toc-backref" href="#id20">Vowel Plots in R</a><a class="headerlink" href="#vowel-plots-in-r" title="Permalink to this headline">#</a></h3>
+<section id="vowel-plots">
+<h3><a class="toc-backref" href="#id21">Vowel Plots</a><a class="headerlink" href="#vowel-plots" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">.libPaths</span><span class="p">()</span>
@@ -1100,56 +1116,13 @@ The following object is masked from ‘package:tidyr’:
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">vowels</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;lab3_avg.csv&#39;</span><span class="p">)</span> <span class="c1">#read.delim(&#39;lab3.csv&#39;,sep=&#39;,&#39;,encoding=&#39;UTF-8&#39;)</span>
-<span class="n">vowels</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_html"><table class="dataframe">
-<caption>A data.frame: 9 × 3</caption>
-<thead>
-	<tr><th scope=col>vowel</th><th scope=col>avg_F1_Hz</th><th scope=col>avg_F2_Hz</th></tr>
-	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
-</thead>
-<tbody>
-	<tr><td>i</td><td>297.87</td><td>2443.90</td></tr>
-	<tr><td>u</td><td>320.73</td><td>1180.12</td></tr>
-	<tr><td>æ</td><td>792.34</td><td>1716.90</td></tr>
-	<tr><td>ɑ</td><td>711.39</td><td>1202.23</td></tr>
-	<tr><td>ɔ</td><td>623.81</td><td> 965.20</td></tr>
-	<tr><td>ɛ</td><td>554.28</td><td>1905.20</td></tr>
-	<tr><td>ɪ</td><td>451.87</td><td>2041.21</td></tr>
-	<tr><td>ʊ</td><td>487.23</td><td>1179.56</td></tr>
-	<tr><td>ʌ</td><td>612.80</td><td>1398.96</td></tr>
-</tbody>
-</table>
-</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">avg_F2_Hz</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">avg_F1_Hz</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span> <span class="o">+</span>
-  <span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">)</span> <span class="o">+</span>
-  <span class="nf">scale_x_reverse</span><span class="p">()</span> <span class="o">+</span>
-  <span class="nf">scale_y_reverse</span><span class="p">()</span> <span class="o">+</span>
-  <span class="nf">theme_classic</span><span class="p">()</span> <span class="o">+</span>
-  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">)</span>
-
-<span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">print</span><span class="p">(</span><span class="n">plt</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/lab3_44_0.png" src="../_images/lab3_44_0.png" />
-</div>
-</div>
 <hr class="docutils" />
+<section id="observations">
+<h4><a class="toc-backref" href="#id22">Observations</a><a class="headerlink" href="#observations" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">vowels</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;lab3_obs.csv&#39;</span><span class="p">)</span>
-<span class="n">vowels</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">obs</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;lab3_obs.csv&#39;</span><span class="p">)</span>
+<span class="n">obs</span>
 </pre></div>
 </div>
 </div>
@@ -1157,7 +1130,7 @@ The following object is masked from ‘package:tidyr’:
 <div class="output text_html"><table class="dataframe">
 <caption>A data.frame: 18 × 3</caption>
 <thead>
-	<tr><th scope=col>vowel</th><th scope=col>avg_F1_Hz</th><th scope=col>avg_F2_Hz</th></tr>
+	<tr><th scope=col>vowel</th><th scope=col>F1_Hz</th><th scope=col>F2_Hz</th></tr>
 	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
@@ -1185,10 +1158,12 @@ The following object is masked from ‘package:tidyr’:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>
 
-<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">avg_F2_Hz</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">avg_F1_Hz</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span> <span class="o">+</span>
-  <span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">4</span><span class="p">)</span> <span class="o">+</span>
+<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">obs</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">F2_Hz</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">F1_Hz</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">)</span> <span class="o">+</span>
+  <span class="c1"># scale_x_reverse() +</span>
+  <span class="c1"># scale_y_reverse() +</span>
   <span class="nf">coord_cartesian</span><span class="p">(</span>
     <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3000</span><span class="p">,</span> <span class="m">200</span><span class="p">),</span>
     <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span> <span class="o">+</span>
@@ -1196,170 +1171,25 @@ The following object is masked from ‘package:tidyr’:
   <span class="nf">theme</span><span class="p">(</span>
     <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
     <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span>
-    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">13</span><span class="p">))</span>
+    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">20</span><span class="p">)</span>
+  <span class="p">)</span>
 
 <span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">print</span><span class="p">(</span><span class="n">plt</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lab3_47_0.png" src="../_images/lab3_47_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
-
-<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">avg_F2_Hz</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">avg_F1_Hz</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">6</span><span class="p">)</span><span class="o">+</span> <span class="c1"># font size</span>
-<span class="nf">scale_x_reverse</span><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><span class="s">&#39;top&#39;</span><span class="p">,</span>
-    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">200</span><span class="p">,</span> <span class="m">3000</span><span class="p">,</span> <span class="m">500</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">scale_y_reverse</span><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><span class="s">&#39;right&#39;</span><span class="p">,</span>
-    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">1000</span><span class="p">,</span> <span class="m">250</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">labs</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s">&#39;F2\n&#39;</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="s">&#39;F1\n&#39;</span><span class="p">,</span>
-    <span class="n">title</span><span class="o">=</span><span class="s">&#39;Density Plot&#39;</span><span class="p">)</span><span class="o">+</span>
-<span class="nf">geom_density_2d</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">)</span><span class="o">+</span>
-<span class="nf">coord_cartesian</span><span class="p">(</span>
-    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3000</span><span class="p">,</span> <span class="m">200</span><span class="p">),</span>
-    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">theme_light</span><span class="p">()</span><span class="o">+</span>
-<span class="nf">theme</span><span class="p">(</span>
-    <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
-    <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span> <span class="c1"># center plot title</span>
-    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">13</span><span class="p">))</span>         <span class="c1"># plot font size</span>
-
-<span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">print</span><span class="p">(</span><span class="n">plt</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/lab3_48_0.png" src="../_images/lab3_48_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
-
-<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">avg_F2_Hz</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">avg_F1_Hz</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">6</span><span class="p">)</span><span class="o">+</span> <span class="c1"># font size</span>
-<span class="nf">scale_x_reverse</span><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><span class="s">&#39;top&#39;</span><span class="p">,</span>
-    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">200</span><span class="p">,</span> <span class="m">3000</span><span class="p">,</span> <span class="m">500</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">scale_y_reverse</span><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><span class="s">&#39;right&#39;</span><span class="p">,</span>
-    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">1000</span><span class="p">,</span> <span class="m">250</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">labs</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s">&#39;F2\n&#39;</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="s">&#39;F1\n&#39;</span><span class="p">,</span>
-    <span class="n">title</span><span class="o">=</span><span class="s">&#39;Density Plot&#39;</span><span class="p">)</span><span class="o">+</span>
-<span class="nf">stat_ellipse</span><span class="p">(</span><span class="n">type</span><span class="o">=</span><span class="s">&#39;norm&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="m">0.3</span><span class="p">)</span><span class="o">+</span>
-<span class="nf">coord_cartesian</span><span class="p">(</span>
-    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3000</span><span class="p">,</span> <span class="m">200</span><span class="p">),</span>
-    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">theme_classic</span><span class="p">()</span><span class="o">+</span>
-<span class="nf">theme</span><span class="p">(</span>
-    <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
-    <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span> <span class="c1"># center plot title</span>
-    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">13</span><span class="p">))</span>         <span class="c1"># plot font size</span>
-
-<span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">print</span><span class="p">(</span><span class="n">plt</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-</pre></div>
-</div>
-<img alt="../_images/lab3_49_1.png" src="../_images/lab3_49_1.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">4</span><span class="p">)</span>
-
-<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">avg_F2_Hz</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">avg_F1_Hz</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">geom_label</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">6</span><span class="p">)</span><span class="o">+</span> <span class="c1"># font size</span>
-<span class="nf">scale_x_reverse</span><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><span class="s">&#39;top&#39;</span><span class="p">,</span>
-    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">200</span><span class="p">,</span> <span class="m">3000</span><span class="p">,</span> <span class="m">500</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">scale_y_reverse</span><span class="p">(</span>
-    <span class="n">position</span><span class="o">=</span><span class="s">&#39;right&#39;</span><span class="p">,</span>
-    <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">),</span>
-    <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">1000</span><span class="p">,</span> <span class="m">250</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">labs</span><span class="p">(</span>
-    <span class="n">x</span><span class="o">=</span><span class="s">&#39;F2\n&#39;</span><span class="p">,</span>
-    <span class="n">y</span><span class="o">=</span><span class="s">&#39;F1\n&#39;</span><span class="p">,</span>
-    <span class="n">title</span><span class="o">=</span><span class="s">&#39;Density Plot&#39;</span><span class="p">)</span><span class="o">+</span>
-<span class="nf">stat_ellipse</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">vowels</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">avg_F2_Hz</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">avg_F1_Hz</span><span class="p">),</span> <span class="n">type</span><span class="o">=</span><span class="s">&#39;norm&#39;</span><span class="p">)</span><span class="o">+</span>
-<span class="nf">coord_cartesian</span><span class="p">(</span>
-    <span class="n">xlim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">3000</span><span class="p">,</span> <span class="m">200</span><span class="p">),</span>
-    <span class="n">ylim</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">1000</span><span class="p">,</span> <span class="m">100</span><span class="p">))</span><span class="o">+</span>
-<span class="nf">theme_classic</span><span class="p">()</span><span class="o">+</span>
-<span class="nf">theme</span><span class="p">(</span>
-    <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
-    <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span> <span class="c1"># center plot title</span>
-    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">13</span><span class="p">))</span>         <span class="c1"># plot font size</span>
-
-<span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">print</span><span class="p">(</span><span class="n">plt</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-
-Too few points to calculate an ellipse
-</pre></div>
-</div>
-<img alt="../_images/lab3_50_1.png" src="../_images/lab3_50_1.png" />
+<img alt="../_images/lab3_39_0.png" src="../_images/lab3_39_0.png" />
 </div>
 </div>
 </section>
 <hr class="docutils" />
-<section id="frequency-vs-barks">
-<h3><a class="toc-backref" href="#id21">Frequency vs Barks</a><a class="headerlink" href="#frequency-vs-barks" title="Permalink to this headline">#</a></h3>
+<section id="averages">
+<h4><a class="toc-backref" href="#id23">Averages</a><a class="headerlink" href="#averages" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">freqs</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;lab3_avg.csv&#39;</span><span class="p">)</span> <span class="c1">#read.delim(&#39;lab3.csv&#39;,sep=&#39;,&#39;,encoding=&#39;UTF-8&#39;)</span>
-<span class="n">freqs</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">avg</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;lab3_avg.csv&#39;</span><span class="p">)</span>
+<span class="n">avg</span>
 </pre></div>
 </div>
 </div>
@@ -1367,7 +1197,7 @@ Too few points to calculate an ellipse
 <div class="output text_html"><table class="dataframe">
 <caption>A data.frame: 9 × 3</caption>
 <thead>
-	<tr><th scope=col>vowel</th><th scope=col>avg_F1_Hz</th><th scope=col>avg_F2_Hz</th></tr>
+	<tr><th scope=col>vowel</th><th scope=col>F1_Hz</th><th scope=col>F2_Hz</th></tr>
 	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
 </thead>
 <tbody>
@@ -1386,21 +1216,43 @@ Too few points to calculate an ellipse
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">freqs</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">avg_F2_Hz</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">avg_F1_Hz</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span> <span class="o">+</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>
+
+<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">avg</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">F2_Hz</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">F1_Hz</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span> <span class="o">+</span>
   <span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">)</span> <span class="o">+</span>
-  <span class="nf">scale_x_reverse</span><span class="p">()</span> <span class="o">+</span>
-  <span class="nf">scale_y_reverse</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">scale_x_reverse</span><span class="p">(</span>
+      <span class="n">position</span><span class="o">=</span><span class="s">&#39;bottom&#39;</span><span class="p">,</span>
+      <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">),</span>
+      <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">200</span><span class="p">,</span> <span class="m">3000</span><span class="p">,</span> <span class="m">500</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">scale_y_reverse</span><span class="p">(</span>
+      <span class="n">position</span><span class="o">=</span><span class="s">&#39;left&#39;</span><span class="p">,</span>
+      <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;Hz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">),</span>
+      <span class="n">breaks</span><span class="o">=</span><span class="nf">seq</span><span class="p">(</span><span class="m">100</span><span class="p">,</span> <span class="m">1000</span><span class="p">,</span> <span class="m">250</span><span class="p">))</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s">&#39;F2\n&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s">&#39;F1\n&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">&#39;Density Plot&#39;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="c1">#stat_ellipse(data=avg, aes(x=F2_Hz, y=F1_Hz), type=&#39;norm&#39;) +</span>
   <span class="nf">theme_classic</span><span class="p">()</span> <span class="o">+</span>
-  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">)</span>
+  <span class="nf">theme</span><span class="p">(</span>
+    <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
+    <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span>
+    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">20</span><span class="p">)</span>
+  <span class="p">)</span>
 
 <span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">print</span><span class="p">(</span><span class="n">plt</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lab3_54_0.png" src="../_images/lab3_54_0.png" />
+<img alt="../_images/lab3_43_0.png" src="../_images/lab3_43_0.png" />
 </div>
 </div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="frequency-vs-barks">
+<h3><a class="toc-backref" href="#id24">Frequency vs Barks</a><a class="headerlink" href="#frequency-vs-barks" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">barks</span> <span class="o">&lt;-</span> <span class="nf">read.csv</span><span class="p">(</span><span class="s">&#39;lab3_bark.csv&#39;</span><span class="p">)</span>
@@ -1431,25 +1283,44 @@ Too few points to calculate an ellipse
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">barks</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">F2_bark</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">F1_bark</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span> <span class="o">+</span>
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">options</span><span class="p">(</span><span class="n">repr.plot.width</span><span class="o">=</span><span class="m">10</span><span class="p">,</span> <span class="n">repr.plot.height</span><span class="o">=</span><span class="m">10</span><span class="p">)</span>
+
+<span class="n">plt</span> <span class="o">&lt;-</span> <span class="nf">ggplot</span><span class="p">(</span><span class="n">barks</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">F2_bark</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">F1_bark</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">vowel</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">vowel</span><span class="p">))</span> <span class="o">+</span>
   <span class="nf">geom_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">10</span><span class="p">)</span> <span class="o">+</span>
-  <span class="nf">scale_x_reverse</span><span class="p">()</span> <span class="o">+</span>
-  <span class="nf">scale_y_reverse</span><span class="p">()</span> <span class="o">+</span>
+  <span class="nf">scale_x_reverse</span><span class="p">(</span>
+      <span class="n">position</span><span class="o">=</span><span class="s">&#39;bottom&#39;</span><span class="p">,</span>
+      <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;barks&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">),</span>
+      <span class="c1">#breaks=seq(200, 3000, 500)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">scale_y_reverse</span><span class="p">(</span>
+      <span class="n">position</span><span class="o">=</span><span class="s">&#39;left&#39;</span><span class="p">,</span>
+      <span class="n">labels</span><span class="o">=</span><span class="nf">unit_format</span><span class="p">(</span><span class="n">unit</span><span class="o">=</span><span class="s">&#39;barks&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s">&#39; &#39;</span><span class="p">),</span>
+      <span class="c1">#breaks=seq(100, 1000, 250)</span>
+  <span class="p">)</span> <span class="o">+</span>
+  <span class="nf">labs</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s">&#39;F2\n&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s">&#39;F1\n&#39;</span><span class="p">,</span>
+    <span class="n">title</span><span class="o">=</span><span class="s">&#39;Density Plot&#39;</span><span class="p">)</span> <span class="o">+</span>
+  <span class="c1">#stat_ellipse(data=barks, aes(x=F2_Hz, y=F1_Hz), type=&#39;norm&#39;) +</span>
   <span class="nf">theme_classic</span><span class="p">()</span> <span class="o">+</span>
-  <span class="nf">theme</span><span class="p">(</span><span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">)</span>
+  <span class="nf">theme</span><span class="p">(</span>
+    <span class="n">legend.position</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">,</span>
+    <span class="n">plot.title</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">hjust</span><span class="o">=</span><span class="m">0.5</span><span class="p">),</span>
+    <span class="n">text</span><span class="o">=</span><span class="nf">element_text</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">20</span><span class="p">)</span>
+  <span class="p">)</span>
 
 <span class="nf">suppressWarnings</span><span class="p">(</span><span class="nf">print</span><span class="p">(</span><span class="n">plt</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lab3_56_0.png" src="../_images/lab3_56_0.png" />
+<img alt="../_images/lab3_47_0.png" src="../_images/lab3_47_0.png" />
 </div>
 </div>
 </section>
 <hr class="docutils" />
-<section id="more-vowel-plots-in-r">
-<h3><a class="toc-backref" href="#id22">More vowel plots in R</a><a class="headerlink" href="#more-vowel-plots-in-r" title="Permalink to this headline">#</a></h3>
+<section id="simulating-vowel-plots-in-r">
+<h3><a class="toc-backref" href="#id25">Simulating vowel plots in R</a><a class="headerlink" href="#simulating-vowel-plots-in-r" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
@@ -1582,7 +1453,7 @@ Too few points to calculate an ellipse
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lab3_61_0.png" src="../_images/lab3_61_0.png" />
+<img alt="../_images/lab3_52_0.png" src="../_images/lab3_52_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1618,7 +1489,7 @@ Too few points to calculate an ellipse
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lab3_62_0.png" src="../_images/lab3_62_0.png" />
+<img alt="../_images/lab3_53_0.png" src="../_images/lab3_53_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1654,7 +1525,7 @@ Too few points to calculate an ellipse
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lab3_63_0.png" src="../_images/lab3_63_0.png" />
+<img alt="../_images/lab3_54_0.png" src="../_images/lab3_54_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1702,7 +1573,7 @@ Too few points to calculate an ellipse
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lab3_65_0.png" src="../_images/lab3_65_0.png" />
+<img alt="../_images/lab3_56_0.png" src="../_images/lab3_56_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1738,14 +1609,14 @@ Too few points to calculate an ellipse
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lab3_66_0.png" src="../_images/lab3_66_0.png" />
+<img alt="../_images/lab3_57_0.png" src="../_images/lab3_57_0.png" />
 </div>
 </div>
 </section>
 </section>
 <hr class="docutils" />
 <section id="resources">
-<h2><a class="toc-backref" href="#id23">Resources</a><a class="headerlink" href="#resources" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id26">Resources</a><a class="headerlink" href="#resources" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.r-project.org/about.html">Home</a></p></li>
 <li><p>Docs</p>
@@ -1781,7 +1652,7 @@ Too few points to calculate an ellipse
 </section>
 <hr class="docutils" />
 <section id="terms">
-<h2><a class="toc-backref" href="#id24">Terms</a><a class="headerlink" href="#terms" title="Permalink to this headline">#</a></h2>
+<h2><a class="toc-backref" href="#id27">Terms</a><a class="headerlink" href="#terms" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>[<a class="reference external" href="https://en.wikipedia.org/wiki/Bark_scale">W</a>] Bark Scale</p></li>
 </ul>
