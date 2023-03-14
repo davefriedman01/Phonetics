@@ -1,7 +1,5 @@
-# Phonetics
+# LING 497 Acoustic & Auditory Phonetics
 
-The Pennsylvania State University
+The Pennsylvania State University [Spring 2023]
 
-LING 497 Acoustic and Auditory Phonetics
-
-2023 Spring with [Prof. Deborah Morton](https://deborahcmorton.wordpress.com/)
+[Prof. Deborah Morton](https://deborahcmorton.wordpress.com/)
