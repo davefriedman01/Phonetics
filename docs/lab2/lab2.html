@@ -1,0 +1,1033 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Lab 2 &#8212; LING 497</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://davefriedman01.github.io/LING497/lab2/lab2.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lab 3" href="../lab3/lab3.html" />
+    <link rel="prev" title="Phonetics" href="../notebook.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-9EP7GGKNT5"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-9EP7GGKNT5');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">LING 497</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../notebook.html">
+   Phonetics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab3/lab3.html">
+   Lab 3
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   ɪŋʊɾʊ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gtn">
+   gɪtɑnɪ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gf">
+   gʊfɑŋɑ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wn">
+   ŋ̩wɑnɑ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gioto">
+   giʤoto
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lab 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   ɪŋʊɾʊ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gtn">
+   gɪtɑnɪ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gf">
+   gʊfɑŋɑ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wn">
+   ŋ̩wɑnɑ
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gioto">
+   giʤoto
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="lab-2">
+<h1>Lab 2<a class="headerlink" href="#lab-2" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Anii_language">Anii</a></p>
+<p><a class="reference external" href="https://www.fon.hum.uva.nl/praat/">Praat</a></p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">cols</span><span class="o">=</span><span class="p">[</span>
+  <span class="s1">&#39;vowel&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;word&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;duration_[s]&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;avg_pitch_[Hz]&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;avg_f1_[Hz]&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;avg_f2_[Hz]&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section id="id1">
+<h2>ɪŋʊɾʊ<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+  <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;ɪ&#39;</span><span class="p">,</span><span class="s1">&#39;ɪŋʊɾʊ&#39;</span><span class="p">,</span><span class="mf">0.086119</span><span class="p">,</span><span class="mf">93.59</span><span class="p">,</span><span class="mf">466.6903022180635</span><span class="p">,</span><span class="mf">1766.545144534218</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;ʊ&#39;</span><span class="p">,</span><span class="s1">&#39;ɪŋʊɾʊ&#39;</span><span class="p">,</span><span class="mf">0.097062</span><span class="p">,</span><span class="mf">98.88</span><span class="p">,</span><span class="mf">515.24847237277</span><span class="p">,</span><span class="mf">873.1683246462179</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;ʊ&#39;</span><span class="p">,</span><span class="s1">&#39;ɪŋʊɾʊ&#39;</span><span class="p">,</span><span class="mf">0.044060</span><span class="p">,</span><span class="mf">100.40</span><span class="p">,</span><span class="mf">555.185617008055</span><span class="p">,</span><span class="mf">1397.6951513926542</span><span class="p">],</span>
+  <span class="p">],</span>
+  <span class="n">columns</span><span class="o">=</span><span class="n">cols</span>
+<span class="p">)</span>
+<span class="n">df1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vowel</th>
+      <th>word</th>
+      <th>duration_[s]</th>
+      <th>avg_pitch_[Hz]</th>
+      <th>avg_f1_[Hz]</th>
+      <th>avg_f2_[Hz]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ɪ</td>
+      <td>ɪŋʊɾʊ</td>
+      <td>0.086119</td>
+      <td>93.59</td>
+      <td>466.690302</td>
+      <td>1766.545145</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ʊ</td>
+      <td>ɪŋʊɾʊ</td>
+      <td>0.097062</td>
+      <td>98.88</td>
+      <td>515.248472</td>
+      <td>873.168325</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ʊ</td>
+      <td>ɪŋʊɾʊ</td>
+      <td>0.044060</td>
+      <td>100.40</td>
+      <td>555.185617</td>
+      <td>1397.695151</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><img alt="" src="../_images/0.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="gtn">
+<h2>gɪtɑnɪ<a class="headerlink" href="#gtn" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+  <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;ɪ&#39;</span><span class="p">,</span><span class="s1">&#39;gɪtɑnɪ&#39;</span><span class="p">,</span><span class="mf">0.089908</span><span class="p">,</span><span class="mf">91.83</span><span class="p">,</span><span class="mf">364.51569821825854</span><span class="p">,</span><span class="mf">2023.891019658131</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;ɑ&#39;</span><span class="p">,</span><span class="s1">&#39;gɪtɑnɪ&#39;</span><span class="p">,</span><span class="mf">0.105583</span><span class="p">,</span><span class="mf">100.10</span><span class="p">,</span><span class="mf">688.6183713367284</span><span class="p">,</span><span class="mf">1492.4319104789486</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;ɪ&#39;</span><span class="p">,</span><span class="s1">&#39;gɪtɑnɪ&#39;</span><span class="p">,</span><span class="mf">0.054948</span><span class="p">,</span><span class="mf">103.30</span><span class="p">,</span><span class="mf">479.36615954884286</span><span class="p">,</span><span class="mf">1835.6777999095636</span><span class="p">],</span>
+  <span class="p">],</span>
+  <span class="n">columns</span><span class="o">=</span><span class="n">cols</span>
+<span class="p">)</span>
+<span class="n">df2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vowel</th>
+      <th>word</th>
+      <th>duration_[s]</th>
+      <th>avg_pitch_[Hz]</th>
+      <th>avg_f1_[Hz]</th>
+      <th>avg_f2_[Hz]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ɪ</td>
+      <td>gɪtɑnɪ</td>
+      <td>0.089908</td>
+      <td>91.83</td>
+      <td>364.515698</td>
+      <td>2023.89102</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ɑ</td>
+      <td>gɪtɑnɪ</td>
+      <td>0.105583</td>
+      <td>100.10</td>
+      <td>688.618371</td>
+      <td>1492.43191</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ɪ</td>
+      <td>gɪtɑnɪ</td>
+      <td>0.054948</td>
+      <td>103.30</td>
+      <td>479.366160</td>
+      <td>1835.67780</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><img alt="" src="../_images/1.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="gf">
+<h2>gʊfɑŋɑ<a class="headerlink" href="#gf" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+  <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;ʊ&#39;</span><span class="p">,</span><span class="s1">&#39;gʊfɑŋɑ&#39;</span><span class="p">,</span><span class="mf">0.066951</span><span class="p">,</span><span class="mf">102.30</span><span class="p">,</span><span class="mf">500.7447927704425</span><span class="p">,</span><span class="mf">1419.8999542184863</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;ɑ&#39;</span><span class="p">,</span><span class="s1">&#39;gʊfɑŋɑ&#39;</span><span class="p">,</span><span class="mf">0.104393</span><span class="p">,</span><span class="mf">114.10</span><span class="p">,</span><span class="mf">656.9639738790062</span><span class="p">,</span><span class="mf">1261.0501295780969</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;ɑ&#39;</span><span class="p">,</span><span class="s1">&#39;gʊfɑŋɑ&#39;</span><span class="p">,</span><span class="mf">0.082586</span><span class="p">,</span><span class="mf">115.40</span><span class="p">,</span><span class="mf">690.0448058137032</span><span class="p">,</span><span class="mf">1419.7442499962647</span><span class="p">],</span>
+  <span class="p">],</span>
+  <span class="n">columns</span><span class="o">=</span><span class="n">cols</span>
+<span class="p">)</span>
+<span class="n">df3</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vowel</th>
+      <th>word</th>
+      <th>duration_[s]</th>
+      <th>avg_pitch_[Hz]</th>
+      <th>avg_f1_[Hz]</th>
+      <th>avg_f2_[Hz]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ʊ</td>
+      <td>gʊfɑŋɑ</td>
+      <td>0.066951</td>
+      <td>102.3</td>
+      <td>500.744793</td>
+      <td>1419.899954</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ɑ</td>
+      <td>gʊfɑŋɑ</td>
+      <td>0.104393</td>
+      <td>114.1</td>
+      <td>656.963974</td>
+      <td>1261.050130</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ɑ</td>
+      <td>gʊfɑŋɑ</td>
+      <td>0.082586</td>
+      <td>115.4</td>
+      <td>690.044806</td>
+      <td>1419.744250</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><img alt="" src="../_images/2.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="wn">
+<h2>ŋ̩wɑnɑ<a class="headerlink" href="#wn" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+  <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;ŋ̩&#39;</span><span class="p">,</span><span class="s1">&#39;ŋ̩wɑnɑ&#39;</span><span class="p">,</span><span class="mf">0.109944</span><span class="p">,</span><span class="mf">103.60</span><span class="p">,</span><span class="mf">385.7128256347075</span><span class="p">,</span><span class="mf">1670.9380122978068</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;ɑ&#39;</span><span class="p">,</span><span class="s1">&#39;ŋ̩wɑnɑ&#39;</span><span class="p">,</span><span class="mf">0.096705</span><span class="p">,</span><span class="mf">109.80</span><span class="p">,</span><span class="mf">691.2607346988126</span><span class="p">,</span><span class="mf">1349.9162934465471</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;ɑ&#39;</span><span class="p">,</span><span class="s1">&#39;ŋ̩wɑnɑ&#39;</span><span class="p">,</span><span class="mf">0.071231</span><span class="p">,</span><span class="mf">102.00</span><span class="p">,</span><span class="mf">636.6214719076272</span><span class="p">,</span><span class="mf">1561.746116663688</span><span class="p">],</span>
+  <span class="p">],</span>
+  <span class="n">columns</span><span class="o">=</span><span class="n">cols</span>
+<span class="p">)</span>
+<span class="n">df4</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vowel</th>
+      <th>word</th>
+      <th>duration_[s]</th>
+      <th>avg_pitch_[Hz]</th>
+      <th>avg_f1_[Hz]</th>
+      <th>avg_f2_[Hz]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ŋ̩</td>
+      <td>ŋ̩wɑnɑ</td>
+      <td>0.109944</td>
+      <td>103.6</td>
+      <td>385.712826</td>
+      <td>1670.938012</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ɑ</td>
+      <td>ŋ̩wɑnɑ</td>
+      <td>0.096705</td>
+      <td>109.8</td>
+      <td>691.260735</td>
+      <td>1349.916293</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ɑ</td>
+      <td>ŋ̩wɑnɑ</td>
+      <td>0.071231</td>
+      <td>102.0</td>
+      <td>636.621472</td>
+      <td>1561.746117</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><img alt="" src="../_images/3.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="gioto">
+<h2>giʤoto<a class="headerlink" href="#gioto" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df5</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+  <span class="n">data</span><span class="o">=</span><span class="p">[</span>
+    <span class="p">[</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;giʤoto&#39;</span><span class="p">,</span><span class="mf">0.129482</span><span class="p">,</span><span class="mf">134.70</span><span class="p">,</span><span class="mf">342.0308099761518</span><span class="p">,</span><span class="mf">2008.6442292576407</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;giʤoto&#39;</span><span class="p">,</span><span class="mf">0.105140</span><span class="p">,</span><span class="mf">141.00</span><span class="p">,</span><span class="mf">369.4878212931457</span><span class="p">,</span><span class="mf">1416.8457811554285</span><span class="p">],</span>
+    <span class="p">[</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="s1">&#39;giʤoto&#39;</span><span class="p">,</span><span class="mf">0.130837</span><span class="p">,</span><span class="mf">164.30</span><span class="p">,</span><span class="mf">365.7859352775467</span><span class="p">,</span><span class="mf">1126.0169349503485</span><span class="p">],</span>
+  <span class="p">],</span>
+  <span class="n">columns</span><span class="o">=</span><span class="n">cols</span>
+<span class="p">)</span>
+<span class="n">df5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vowel</th>
+      <th>word</th>
+      <th>duration_[s]</th>
+      <th>avg_pitch_[Hz]</th>
+      <th>avg_f1_[Hz]</th>
+      <th>avg_f2_[Hz]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>i</td>
+      <td>giʤoto</td>
+      <td>0.129482</td>
+      <td>134.7</td>
+      <td>342.030810</td>
+      <td>2008.644229</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>o</td>
+      <td>giʤoto</td>
+      <td>0.105140</td>
+      <td>141.0</td>
+      <td>369.487821</td>
+      <td>1416.845781</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>o</td>
+      <td>giʤoto</td>
+      <td>0.130837</td>
+      <td>164.3</td>
+      <td>365.785935</td>
+      <td>1126.016935</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><img alt="" src="../_images/4.png" /></p>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span><span class="n">df2</span><span class="p">,</span><span class="n">df3</span><span class="p">,</span><span class="n">df4</span><span class="p">,</span><span class="n">df5</span><span class="p">],</span><span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vowel</th>
+      <th>word</th>
+      <th>duration_[s]</th>
+      <th>avg_pitch_[Hz]</th>
+      <th>avg_f1_[Hz]</th>
+      <th>avg_f2_[Hz]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>ɪ</td>
+      <td>ɪŋʊɾʊ</td>
+      <td>0.086119</td>
+      <td>93.59</td>
+      <td>466.690302</td>
+      <td>1766.545145</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ʊ</td>
+      <td>ɪŋʊɾʊ</td>
+      <td>0.097062</td>
+      <td>98.88</td>
+      <td>515.248472</td>
+      <td>873.168325</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ʊ</td>
+      <td>ɪŋʊɾʊ</td>
+      <td>0.044060</td>
+      <td>100.40</td>
+      <td>555.185617</td>
+      <td>1397.695151</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ɪ</td>
+      <td>gɪtɑnɪ</td>
+      <td>0.089908</td>
+      <td>91.83</td>
+      <td>364.515698</td>
+      <td>2023.891020</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ɑ</td>
+      <td>gɪtɑnɪ</td>
+      <td>0.105583</td>
+      <td>100.10</td>
+      <td>688.618371</td>
+      <td>1492.431910</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>ɪ</td>
+      <td>gɪtɑnɪ</td>
+      <td>0.054948</td>
+      <td>103.30</td>
+      <td>479.366160</td>
+      <td>1835.677800</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ʊ</td>
+      <td>gʊfɑŋɑ</td>
+      <td>0.066951</td>
+      <td>102.30</td>
+      <td>500.744793</td>
+      <td>1419.899954</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>ɑ</td>
+      <td>gʊfɑŋɑ</td>
+      <td>0.104393</td>
+      <td>114.10</td>
+      <td>656.963974</td>
+      <td>1261.050130</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>ɑ</td>
+      <td>gʊfɑŋɑ</td>
+      <td>0.082586</td>
+      <td>115.40</td>
+      <td>690.044806</td>
+      <td>1419.744250</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>ŋ̩</td>
+      <td>ŋ̩wɑnɑ</td>
+      <td>0.109944</td>
+      <td>103.60</td>
+      <td>385.712826</td>
+      <td>1670.938012</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>ɑ</td>
+      <td>ŋ̩wɑnɑ</td>
+      <td>0.096705</td>
+      <td>109.80</td>
+      <td>691.260735</td>
+      <td>1349.916293</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>ɑ</td>
+      <td>ŋ̩wɑnɑ</td>
+      <td>0.071231</td>
+      <td>102.00</td>
+      <td>636.621472</td>
+      <td>1561.746117</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>i</td>
+      <td>giʤoto</td>
+      <td>0.129482</td>
+      <td>134.70</td>
+      <td>342.030810</td>
+      <td>2008.644229</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>o</td>
+      <td>giʤoto</td>
+      <td>0.105140</td>
+      <td>141.00</td>
+      <td>369.487821</td>
+      <td>1416.845781</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>o</td>
+      <td>giʤoto</td>
+      <td>0.130837</td>
+      <td>164.30</td>
+      <td>365.785935</td>
+      <td>1126.016935</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;word&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;vowel&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;duration_[s]&#39;</span><span class="p">:</span><span class="s1">&#39;avg_duration_[s]&#39;</span><span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>avg_duration_[s]</th>
+      <th>avg_pitch_[Hz]</th>
+      <th>avg_f1_[Hz]</th>
+      <th>avg_f2_[Hz]</th>
+    </tr>
+    <tr>
+      <th>vowel</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>i</th>
+      <td>0.129482</td>
+      <td>134.700000</td>
+      <td>342.030810</td>
+      <td>2008.644229</td>
+    </tr>
+    <tr>
+      <th>o</th>
+      <td>0.117988</td>
+      <td>152.650000</td>
+      <td>367.636878</td>
+      <td>1271.431358</td>
+    </tr>
+    <tr>
+      <th>ŋ̩</th>
+      <td>0.109944</td>
+      <td>103.600000</td>
+      <td>385.712826</td>
+      <td>1670.938012</td>
+    </tr>
+    <tr>
+      <th>ɑ</th>
+      <td>0.092100</td>
+      <td>108.280000</td>
+      <td>672.701872</td>
+      <td>1416.977740</td>
+    </tr>
+    <tr>
+      <th>ɪ</th>
+      <td>0.076992</td>
+      <td>96.240000</td>
+      <td>436.857387</td>
+      <td>1875.371321</td>
+    </tr>
+    <tr>
+      <th>ʊ</th>
+      <td>0.069358</td>
+      <td>100.526667</td>
+      <td>523.726294</td>
+      <td>1230.254477</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./lab2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../notebook.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Phonetics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../lab3/lab3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lab 3</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By DF<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
